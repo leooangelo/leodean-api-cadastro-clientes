@@ -60,7 +60,7 @@ public class CustomerController {
     //    @PutMapping
 
     //TODO
-//- Spring Security + JWT expertos Tech
+//- expertos Tech
 //- CORS expertos Tech
 //- HATEOAS Michelli Brito
 }

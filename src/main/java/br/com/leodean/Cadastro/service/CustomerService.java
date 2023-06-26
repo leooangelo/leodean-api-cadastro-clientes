@@ -60,8 +60,7 @@ public class CustomerService implements ICustomerService {
                 for (Address address : request.getAddressList()) {
                     CustomerMapper.customerIDRequestCreated(request, customerDataBase.getCustomerID());
                     var addressRequest = CustomerMapper.mappToAddressRequest(address, request);
-                    var addressResponse = addressService.createAddress(addressRequest);
-                    //CustomerMapper.addAddressResponse(customerDataBase,addressResponse);
+                    addressService.createAddress(addressRequest);
                 }
             }
 
@@ -70,8 +69,8 @@ public class CustomerService implements ICustomerService {
                 for (Car car : request.getCarsList()) {
                     CustomerMapper.customerIDRequestCreated(request, customerDataBase.getCustomerID());
                     var carRequest = CustomerMapper.mappToCarRequest(car, request);
-                    var carResponse = carService.createCar(carRequest);
-                    //CustomerMapper.addCarResponse(customerDataBase,carResponse);
+                    carService.createCar(carRequest);
+
                 }
             }
 
