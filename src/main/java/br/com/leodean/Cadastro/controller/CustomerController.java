@@ -29,7 +29,7 @@ public class CustomerController {
         this._customerService = _customerService;
     }
 
-    @CacheEvict(value = "customer", allEntries = true)
+        @CacheEvict(value = "customer", allEntries = true)
     @PostMapping
     public EnvelopData<CustomerDTO> createCustomer(@RequestBody @Valid Customer request) {
         return new EnvelopData<CustomerDTO>(_customerService.createCustomer(request));
@@ -61,6 +61,5 @@ public class CustomerController {
 
     //TODO
 //- expertos Tech
-//- CORS expertos Tech
 //- HATEOAS Michelli Brito
 }

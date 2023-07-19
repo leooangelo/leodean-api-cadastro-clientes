@@ -29,6 +29,7 @@ public class Configurations {
             .antMatchers(HttpMethod.POST, "/login", "/api/user")
             .permitAll()
             .anyRequest().authenticated()
+            .and().cors()
             .and().addFilterBefore(filter,  UsernamePasswordAuthenticationFilter.class)
             .build();
     }
